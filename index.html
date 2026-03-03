@@ -1,416 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dimas Rahmandiansyah — Engineering Portfolio</title>
-  <meta name="description" content="Electrical Engineering student at Telkom University focused on backend development, system architecture, and evolving toward scalable digital infrastructure." />
-  <meta name="keywords" content="backend development, web3, electrical engineering, Telkom University, Indonesia, system architecture, digital systems" />
+  <meta name="description"
+    content="Electrical Engineering student at Telkom University focused on backend development, system architecture, and evolving toward scalable digital infrastructure." />
+  <meta name="keywords"
+    content="backend development, web3, electrical engineering, Telkom University, Indonesia, system architecture, digital systems" />
   <meta name="author" content="Dimas Rahmandiansyah" />
   <meta property="og:title" content="Dimas Rahmandiansyah — Building Structured Digital Systems" />
-  <meta property="og:description" content="Electrical Engineering student exploring backend systems, structured architecture, and decentralized infrastructure." />
+  <meta property="og:description"
+    content="Electrical Engineering student exploring backend systems, structured architecture, and decentralized infrastructure." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
-  <div class="header-inner">
-    <a href="#" class="header-name">Dimas's Portfolio<em>.</em></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="header-icons">
-      <a href="https://github.com/dmsrzky" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub profile">
-        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      </a>
-      <a href="https://linkedin.com/in/dimasrahmandiansyah" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn profile">
-        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-    </div>
-    <button class="burger" id="burger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about"        onclick="closeMobile()">About</a>
-  <a href="#projects"     onclick="closeMobile()">Projects</a>
-  <a href="#achievements" onclick="closeMobile()">Achievements</a>
-  <a href="#contact"      onclick="closeMobile()">Contact</a>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="dot-grid" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-          <circle cx="1" cy="1" r="1" fill="#0D7A5F"/>
-        </pattern>
-        <radialGradient id="dfade" cx="30%" cy="50%" r="60%">
-          <stop offset="0%" stop-color="#F2EFE8" stop-opacity="0"/>
-          <stop offset="100%" stop-color="#F2EFE8" stop-opacity="1"/>
-        </radialGradient>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#dots)"/>
-      <rect width="100%" height="100%" fill="url(#dfade)"/>
-    </svg>
-  </div>
-  <div class="hero-inner">
-    <p class="hero-kicker">Dimas Rizky Rahmandiansyah Putra</p>
-    <h1 class="hero-title">Building and Exploring</h1>
-    <p class="hero-title-2">Digital Systems.</p>
-    <p class="hero-sub">Electrical Engineering student with hands-on experience in web development, IoT systems, and early-stage Web3 exploration.</p>
-    <div class="hero-ctas">
-      <a href="#projects" class="cta-primary">View Projects</a>
-      <a href="https://wa.me/6282114677550?text=Can%20we%20discuss?" target="_blank" class="cta-secondary">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-wrap">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="section-label">01 / About</p>
-        <h2 class="section-title">Structured thinking.<br>Long-term orientation.</h2>
+  <header>
+    <div class="header-inner">
+      <a href="#" class="header-name">Dimas's Portfolio<em>.</em></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-icons">
+        <a href="https://github.com/dmsrzky" target="_blank" rel="noopener" class="icon-link"
+          aria-label="GitHub Profile">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/dimasrahmandiansyah" target="_blank" rel="noopener" class="icon-link"
+          aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="https://wa.me/6282114677550?text=Can%20we%20discuss?" target="_blank" rel="noopener" class="icon-link"
+          aria-label="WhatsApp Chat">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.52 3.48A11.94 11.94 0 0012.01 0C5.39 0 .01 5.38.01 12c0 2.12.56 4.19 1.63 6.02L0 24l6.16-1.61A11.93 11.93 0 0012.01 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.2-3.49-8.52zM12.01 21.82c-1.82 0-3.6-.49-5.16-1.41l-.37-.22-3.65.95.98-3.56-.24-.37A9.79 9.79 0 012.22 12c0-5.4 4.39-9.79 9.79-9.79 2.61 0 5.06 1.02 6.91 2.87a9.73 9.73 0 012.88 6.92c0 5.4-4.39 9.79-9.79 9.79zm5.37-7.36c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.9 1.13-.16.19-.32.21-.61.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.16-.29-.02-.44.12-.58.13-.13.29-.32.43-.48.14-.16.19-.27.29-.45.1-.19.05-.35-.02-.48-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.48.07-.74.35-.26.29-.99.97-.99 2.37s1.01 2.75 1.15 2.94c.14.19 1.98 3.02 4.8 4.24.67.29 1.19.46 1.6.59.67.21 1.28.18 1.76.11.54-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.11-.26-.18-.55-.32z" />
+          </svg>
+        </a>
       </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>I'm an <strong>Electrical Engineering student at Telkom University</strong> (2024–Present) and a recipient of the <strong>Aperti BUMN Scholarship</strong>. My background in electrical systems has shaped how I approach software — with precision, fault tolerance, and specification before execution.</p>
-          <p>I have a track record in competitive engineering and innovation: <strong>Gold Medal at I2ASPO 2023</strong> (IoT category), 2nd Place at PNB IT 2023, and 2nd Place at Rotechtion 2019. These environments trained me to build under constraint and deliver things that work.</p>
-          <p>My current direction is <strong>backend systems and decentralized infrastructure</strong> — where architecture decisions matter as much as implementation. I operate on a simple principle: <strong>clarity, logic, and scalability</strong> — in that order.</p>
-        </div>
-        <div class="about-panel reveal delay-1">
-          <div class="panel-row">
-            <div class="panel-key">Education</div>
-            <div class="panel-val">Telkom University</div>
-            <div class="panel-sub">Electrical Engineering · 2024–Present</div>
-          </div>
-          <div class="panel-row">
-            <div class="panel-key">Scholarship</div>
-            <div class="panel-val">Aperti BUMN</div>
-            <div class="panel-sub">Recipient · 2024</div>
-          </div>
-          <div class="panel-row">
-            <div class="panel-key">Based In</div>
-            <div class="panel-val">Surabaya, Indonesia</div>
-            <div class="panel-sub">Open to remote · hybrid</div>
-          </div>
-          <div class="panel-row">
-            <div class="panel-key">Focus</div>
-            <div class="panel-val">Backend Systems · Web3</div>
-            <div class="panel-sub">Architecture · Infrastructure</div>
-          </div>
-          <div class="panel-row">
-            <div class="panel-key">Open To</div>
-            <div class="panel-val">Internships · Ambassador Programs</div>
-            <div class="panel-sub">Collaborative engineering work</div>
-          </div>
-        </div>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#achievements" onclick="closeMobile()">Achievements</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="dot-grid" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="#0D7A5F" />
+          </pattern>
+          <radialGradient id="dfade" cx="30%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#F2EFE8" stop-opacity="0" />
+            <stop offset="100%" stop-color="#F2EFE8" stop-opacity="1" />
+          </radialGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#dots)" />
+        <rect width="100%" height="100%" fill="url(#dfade)" />
+      </svg>
+    </div>
+    <div class="hero-inner">
+      <p class="hero-kicker">Dimas Rizky Rahmandiansyah Putra</p>
+      <h1 class="hero-title">Building and Exploring</h1>
+      <p class="hero-title-2">Digital Systems.</p>
+      <p class="hero-sub">Electrical Engineering student with hands-on experience in web development, IoT systems, and
+        early-stage Web3 exploration.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="cta-primary">View Projects</a>
+        <a href="https://wa.me/6282114677550?text=Can%20we%20discuss?" target="_blank" class="cta-secondary">Get in
+          Touch</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- TECHNICAL DIRECTION -->
-<section id="technical">
-  <div class="section-wrap">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="section-label">02 / Technical Direction</p>
-        <h2 class="section-title">How I think about<br>building systems.</h2>
-      </div>
-      <div class="tech-grid reveal">
-        <div class="tech-cell">
-          <span class="tech-tag">Layer 01</span>
-          <div class="tech-name">Backend and Web Infrastructure</div>
-          <ul class="tech-list">
-            <li>REST API fundamentals and design</li>
-            <li>Server-side logic &amp; data modeling</li>
-            <li>Deployment experience</li>
-            <li>Hosting environments &amp; server config</li>
-            <li>Git &amp; version control workflow</li>
-          </ul>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-wrap">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section-label">01 / About</p>
+          <h2 class="section-title">Structured thinking.<br>Long-term orientation.</h2>
         </div>
-        <div class="tech-cell">
-          <span class="tech-tag">Layer 02</span>
-          <div class="tech-name">Web3 and Decentralized Exploration</div>
-          <ul class="tech-list">
-            <li>Smart contract logic (Remix, Solidity)</li>
-            <li>Basic Solidity development</li>
-            <li>Decentralized system architecture</li>
-            <li>Token standards &amp; on-chain concepts</li>
-            <li>Testnet deployment &amp; verification</li>
-          </ul>
-        </div>
-        <div class="tech-cell">
-          <span class="tech-tag">Layer 03</span>
-          <div class="tech-name">System Thinking</div>
-          <ul class="tech-list">
-            <li>Structured problem-solving</li>
-            <li>Logic-driven development</li>
-            <li>Architectural mindset</li>
-            <li>Documentation-first approach</li>
-            <li>IoT systems &amp; embedded logic</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-wrap">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="section-label">03 / Selected Projects</p>
-        <h2 class="section-title">Things I have built.</h2>
-      </div>
-
-      <!-- Project 01 -->
-      <div class="project-entry reveal">
-        <div class="project-top">
-          <div>
-            <div class="project-seq">Project 01</div>
-            <div class="project-name">Freelance Website Development</div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm an <strong>Electrical Engineering student at Telkom University</strong> (2024–Present) and a
+              recipient of the <strong>Aperti BUMN Scholarship</strong>. My background in electrical systems has shaped
+              how I approach software — with precision, fault tolerance, and specification before execution.</p>
+            <p>I have a track record in competitive engineering and innovation: <strong>Gold Medal at I2ASPO
+                2023</strong> (IoT category), 2nd Place at PNB IT 2023, and 2nd Place at Rotechtion 2019. These
+              environments trained me to build under constraint and deliver things that work.</p>
+            <p>My current direction is <strong>backend systems and decentralized infrastructure</strong> — where
+              architecture decisions matter as much as implementation. I operate on a simple principle: <strong>clarity,
+                logic, and scalability</strong> — in that order.</p>
           </div>
-          <div class="project-ext-links">
-            <button class="ext-link ext-details" onclick="openModal('p1')">Details ↗</button>
-          </div>
-        </div>
-        <div class="project-body">
-          <div>
-            <div class="proj-field-key">Context / Problem</div>
-            <div class="proj-field-val">A client required a simple web presence to communicate their services clearly and professionally.</div>
-          </div>
-          <div>
-            <div class="proj-field-key">What Was Built</div>
-            <div class="proj-field-val">Designed and developed a responsive website based on client requirements and iterative feedback. Handled deployment to hosting environment and assisted with basic on-page SEO configuration.</div>
-          </div>
-        </div>
-        <div class="project-foot">
-          <span class="stack-pill">HTML</span>
-          <span class="stack-pill">CSS</span>
-          <span class="stack-pill">JavaScript</span>
-          <span class="stack-pill">Hosting Platform</span>
-        </div>
-      </div>
-
-      <!-- Project 02 -->
-      <div class="project-entry reveal delay-1">
-        <div class="project-top">
-          <div>
-            <div class="project-seq">Project 02</div>
-            <div class="project-name">IoT Monitoring System</div>
-          </div>
-          <div class="project-ext-links">
-            <button class="ext-link ext-details" onclick="openModal('p2')">Details ↗</button>
-          </div>
-        </div>
-        <div class="project-body">
-          <div>
-            <div class="proj-field-key">Context / Problem</div>
-            <div class="proj-field-val">Monitoring environmental sensor data in real time using microcontroller-based hardware and a mobile interface.</div>
-          </div>
-          <div>
-            <div class="proj-field-key">What Was Built</div>
-            <div class="proj-field-val">Developed sensor-based monitoring system using Arduino for data processing and transmission. Integrated with the Blynk mobile application to visualize real-time data and enable remote monitoring.</div>
-          </div>
-        </div>
-        <div class="project-foot">
-          <span class="stack-pill">Arduino</span>
-          <span class="stack-pill">Embedded C/C++</span>
-          <span class="stack-pill">Blynk</span>
-        </div>
-      </div>
-
-      <!-- Project 03 -->
-      <div class="project-entry reveal delay-2">
-        <div class="project-top">
-          <div>
-            <div class="project-seq">Project 03</div>
-            <div class="project-name">Smart Contract Token — ERC-20</div>
-          </div>
-          <div class="project-ext-links">
-            <button class="ext-link ext-details" onclick="openModal('p3')">Details ↗</button>
-          </div>
-        </div>
-        <div class="project-body">
-          <div>
-            <div class="proj-field-key">Context / Problem</div>
-            <div class="proj-field-val">Hands-on exploration to understand token logic, contract structure, and deployment flow in decentralized environments.</div>
-          </div>
-          <div>
-            <div class="proj-field-key">What Was Built</div>
-            <div class="proj-field-val">Implemented a basic ERC-20 token contract using Solidity and deployed it to a public testnet through Remix IDE to understand contract lifecycle and on-chain behavior.</div>
-          </div>
-        </div>
-        <div class="project-foot">
-          <span class="stack-pill">Solidity</span>
-          <span class="stack-pill">Remix IDE</span>
-          <span class="stack-pill">Metamask</span>
-          <span class="stack-pill">Testnet</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-  <div class="section-wrap">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="section-label">04 / Selected Achievements</p>
-        <h2 class="section-title">Credibility markers.</h2>
-      </div>
-      <div class="ach-table reveal">
-        <div class="ach-row">
-          <span class="ach-medal">Scholarship</span>
-          <div>
-            <div class="ach-name">Aperti BUMN Scholarship Recipient</div>
-            <div class="ach-org">State-Owned Enterprise Talent Program · Telkom University</div>
-          </div>
-          <span class="ach-year">2024</span>
-        </div>
-        <div class="ach-row">
-          <span class="ach-medal">Gold Medal</span>
-          <div>
-            <div class="ach-name">I2ASPO — IoT Category</div>
-            <div class="ach-org">International Applied Science &amp; Project Olympiad</div>
-          </div>
-          <span class="ach-year">2023</span>
-        </div>
-        <div class="ach-row">
-          <span class="ach-medal">2nd Place</span>
-          <div>
-            <div class="ach-name">PNB IT Competition</div>
-            <div class="ach-org">Politeknik Negeri Bali</div>
-          </div>
-          <span class="ach-year">2023</span>
-        </div>
-        <div class="ach-row">
-          <span class="ach-medal">2nd Place</span>
-          <div>
-            <div class="ach-name">Rotechtion Engineering Competition</div>
-            <div class="ach-org">National Level</div>
-          </div>
-          <span class="ach-year">2019</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMMUNITY -->
-<section id="community">
-  <div class="section-wrap">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="section-label">05 / Community &amp; Collaborative Experience</p>
-        <h2 class="section-title">Participation beyond<br>solo engineering.</h2>
-      </div>
-      <div class="community-layout reveal">
-        <div class="community-card">
-          <div class="comm-role">AIESEC AFL Participant</div>
-          <div class="comm-org">AIESEC · Active Leadership Formation</div>
-          <div class="comm-desc">Participated in structured leadership development programs with cross-cultural team dynamics and collaborative project execution.</div>
-        </div>
-        <div class="community-card">
-          <div class="comm-role">Volunteer Contributor</div>
-          <div class="comm-org">Peduly &amp; Involuntir</div>
-          <div class="comm-desc">Contributed to community impact initiatives through organized volunteer networks. Developed coordination and collaborative delivery skills in team-based environments.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-wrap">
-    <div class="wrap">
-      <div class="contact-grid">
-        <div>
-          <p class="section-label reveal">06 / Contact</p>
-          <h2 class="section-title reveal">Interested in collaborating or discussing structured digital solutions?</h2>
-          <p class="contact-sub reveal">
-            Open to internships, ambassador programs, engineering collaboration, and meaningful technical conversations.
-            <br/><br/>
-            <em>Open to internships, collaboration, and growth opportunities.</em>
-          </p>
-          <a href="https://wa.me/6282114677550?text=Can%20we%20discuss?" target="_blank" class="contact-btn reveal">Get in Touch</a>
-        </div>
-        <div class="contact-channels reveal delay-2">
-          <a href="mailto:dimasrahmandiansyah@gmail.com" class="channel-row">
-            <div>
-              <div class="channel-key">Email</div>
-              <div class="channel-val">dimasrahmandiansyah@gmail.com</div>
+          <div class="about-panel reveal delay-1">
+            <div class="panel-row">
+              <div class="panel-key">Education</div>
+              <div class="panel-val">Telkom University</div>
+              <div class="panel-sub">Electrical Engineering · 2024–Present</div>
             </div>
-            <span class="channel-arr">↗</span>
-          </a>
-          <a href="https://linkedin.com/in/dimasrahmandiansyah" target="_blank" rel="noopener" class="channel-row">
-            <div>
-              <div class="channel-key">LinkedIn</div>
-              <div class="channel-val">linkedin.com/in/dimasrahmandiansyah</div>
+            <div class="panel-row">
+              <div class="panel-key">Scholarship</div>
+              <div class="panel-val">Aperti BUMN</div>
+              <div class="panel-sub">Recipient · 2024</div>
             </div>
-            <span class="channel-arr">↗</span>
-          </a>
-          <a href="https://github.com/dmsrzky" target="_blank" rel="noopener" class="channel-row">
-            <div>
-              <div class="channel-key">GitHub</div>
-              <div class="channel-val">github.com/dmsrzky</div>
+            <div class="panel-row">
+              <div class="panel-key">Based In</div>
+              <div class="panel-val">Surabaya, Indonesia</div>
+              <div class="panel-sub">Open to remote · hybrid</div>
             </div>
-            <span class="channel-arr">↗</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-id">
-      Dimas Rizky Rahmandiansyah Putra &nbsp;·&nbsp;
-      <span>© 2026 · Built and designed personally.</span>
-    </div>
-    <span class="footer-line">Exploring systems. Building with structure.</span>
-  </div>
-</footer>
-
-<!-- MODALS -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
-
-<!-- Modal P1: Freelance Website -->
-<div class="modal" id="modal-p1" role="dialog" aria-modal="true">
-  <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
-  <div class="modal-layout">
-    <div class="modal-gallery">
-      <div class="modal-img-main" id="gallery-p1-main">
-        <div class="modal-img-placeholder">
-          <div class="ph-inner">
-            <span class="ph-icon">◻</span>
-            <span class="ph-label">Project screenshot</span>
-            <span class="ph-hint">Add image: assets/p1-1.jpg</span>
+            <div class="panel-row">
+              <div class="panel-key">Focus</div>
+              <div class="panel-val">Backend Systems · Web3</div>
+              <div class="panel-sub">Architecture · Infrastructure</div>
+            </div>
+            <div class="panel-row">
+              <div class="panel-key">Open To</div>
+              <div class="panel-val">Internships · Ambassador Programs</div>
+              <div class="panel-sub">Collaborative engineering work</div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- UNTUK MENAMBAHKAN FOTO LAGI -->
-      <!-- <div class="modal-img-thumbs" id="thumbs-p1">
+    </div>
+  </section>
+
+  <!-- TECHNICAL DIRECTION -->
+  <section id="technical">
+    <div class="section-wrap">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section-label">02 / Technical Direction</p>
+          <h2 class="section-title">How I think about<br>building systems.</h2>
+        </div>
+        <div class="tech-grid reveal">
+          <div class="tech-cell">
+            <span class="tech-tag">Layer 01</span>
+            <div class="tech-name">Backend and Web Infrastructure</div>
+            <ul class="tech-list">
+              <li>REST API fundamentals and design</li>
+              <li>Server-side logic &amp; data modeling</li>
+              <li>Deployment experience</li>
+              <li>Hosting environments &amp; server config</li>
+              <li>Git &amp; version control workflow</li>
+            </ul>
+          </div>
+          <div class="tech-cell">
+            <span class="tech-tag">Layer 02</span>
+            <div class="tech-name">Web3 and Decentralized Exploration</div>
+            <ul class="tech-list">
+              <li>Smart contract logic (Remix, Solidity)</li>
+              <li>Basic Solidity development</li>
+              <li>Decentralized system architecture</li>
+              <li>Token standards &amp; on-chain concepts</li>
+              <li>Testnet deployment &amp; verification</li>
+            </ul>
+          </div>
+          <div class="tech-cell">
+            <span class="tech-tag">Layer 03</span>
+            <div class="tech-name">System Thinking</div>
+            <ul class="tech-list">
+              <li>Structured problem-solving</li>
+              <li>Logic-driven development</li>
+              <li>Architectural mindset</li>
+              <li>Documentation-first approach</li>
+              <li>IoT systems &amp; embedded logic</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-wrap">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section-label">03 / Selected Projects</p>
+          <h2 class="section-title">Things I have built.</h2>
+        </div>
+
+        <!-- Project 01 -->
+        <div class="project-entry reveal">
+          <div class="project-top">
+            <div>
+              <div class="project-seq">Project 01</div>
+              <div class="project-name">Freelance Website Development</div>
+            </div>
+            <div class="project-ext-links">
+              <button class="ext-link ext-details" onclick="openModal('p1')">Details ↗</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div>
+              <div class="proj-field-key">Context / Problem</div>
+              <div class="proj-field-val">A client required a simple web presence to communicate their services clearly
+                and professionally.</div>
+            </div>
+            <div>
+              <div class="proj-field-key">What Was Built</div>
+              <div class="proj-field-val">Designed and developed a responsive website based on client requirements and
+                iterative feedback. Handled deployment to hosting environment and assisted with basic on-page SEO
+                configuration.</div>
+            </div>
+          </div>
+          <div class="project-foot">
+            <span class="stack-pill">HTML</span>
+            <span class="stack-pill">CSS</span>
+            <span class="stack-pill">JavaScript</span>
+            <span class="stack-pill">Hosting Platform</span>
+          </div>
+        </div>
+
+        <!-- Project 02 -->
+        <div class="project-entry reveal delay-1">
+          <div class="project-top">
+            <div>
+              <div class="project-seq">Project 02</div>
+              <div class="project-name">IoT Monitoring System</div>
+            </div>
+            <div class="project-ext-links">
+              <button class="ext-link ext-details" onclick="openModal('p2')">Details ↗</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div>
+              <div class="proj-field-key">Context / Problem</div>
+              <div class="proj-field-val">Monitoring environmental sensor data in real time using microcontroller-based
+                hardware and a mobile interface.</div>
+            </div>
+            <div>
+              <div class="proj-field-key">What Was Built</div>
+              <div class="proj-field-val">Developed sensor-based monitoring system using Arduino for data processing and
+                transmission. Integrated with the Blynk mobile application to visualize real-time data and enable remote
+                monitoring.</div>
+            </div>
+          </div>
+          <div class="project-foot">
+            <span class="stack-pill">Arduino</span>
+            <span class="stack-pill">Embedded C/C++</span>
+            <span class="stack-pill">Blynk</span>
+          </div>
+        </div>
+
+        <!-- Project 03 -->
+        <div class="project-entry reveal delay-2">
+          <div class="project-top">
+            <div>
+              <div class="project-seq">Project 03</div>
+              <div class="project-name">Smart Contract Token — ERC-20</div>
+            </div>
+            <div class="project-ext-links">
+              <button class="ext-link ext-details" onclick="openModal('p3')">Details ↗</button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div>
+              <div class="proj-field-key">Context / Problem</div>
+              <div class="proj-field-val">Hands-on exploration to understand token logic, contract structure, and
+                deployment flow in decentralized environments.</div>
+            </div>
+            <div>
+              <div class="proj-field-key">What Was Built</div>
+              <div class="proj-field-val">Implemented a basic ERC-20 token contract using Solidity and deployed it to a
+                public testnet through Remix IDE to understand contract lifecycle and on-chain behavior.</div>
+            </div>
+          </div>
+          <div class="project-foot">
+            <span class="stack-pill">Solidity</span>
+            <span class="stack-pill">Remix IDE</span>
+            <span class="stack-pill">Metamask</span>
+            <span class="stack-pill">Testnet</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="section-wrap">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section-label">04 / Selected Achievements</p>
+          <h2 class="section-title">Credibility markers.</h2>
+        </div>
+        <div class="ach-table reveal">
+          <div class="ach-row">
+            <span class="ach-medal">Scholarship</span>
+            <div>
+              <div class="ach-name">Aperti BUMN Scholarship Recipient</div>
+              <div class="ach-org">State-Owned Enterprise Talent Program · Telkom University</div>
+            </div>
+            <span class="ach-year">2024</span>
+          </div>
+          <div class="ach-row">
+            <span class="ach-medal">Gold Medal</span>
+            <div>
+              <div class="ach-name">I2ASPO — IoT Category</div>
+              <div class="ach-org">International Applied Science &amp; Project Olympiad</div>
+            </div>
+            <span class="ach-year">2023</span>
+          </div>
+          <div class="ach-row">
+            <span class="ach-medal">2nd Place</span>
+            <div>
+              <div class="ach-name">PNB IT Competition</div>
+              <div class="ach-org">Politeknik Negeri Bali</div>
+            </div>
+            <span class="ach-year">2023</span>
+          </div>
+          <div class="ach-row">
+            <span class="ach-medal">2nd Place</span>
+            <div>
+              <div class="ach-name">Rotechtion Engineering Competition</div>
+              <div class="ach-org">National Level</div>
+            </div>
+            <span class="ach-year">2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community">
+    <div class="section-wrap">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section-label">05 / Community &amp; Collaborative Experience</p>
+          <h2 class="section-title">Participation beyond<br>solo engineering.</h2>
+        </div>
+        <div class="community-layout reveal">
+          <div class="community-card">
+            <div class="comm-role">AIESEC AFL Participant</div>
+            <div class="comm-org">AIESEC · Active Leadership Formation</div>
+            <div class="comm-desc">Participated in structured leadership development programs with cross-cultural team
+              dynamics and collaborative project execution.</div>
+          </div>
+          <div class="community-card">
+            <div class="comm-role">Volunteer Contributor</div>
+            <div class="comm-org">Peduly &amp; Involuntir</div>
+            <div class="comm-desc">Contributed to community impact initiatives through organized volunteer networks.
+              Developed coordination and collaborative delivery skills in team-based environments.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-wrap">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div>
+            <p class="section-label reveal">06 / Contact</p>
+            <h2 class="section-title reveal">Interested in collaborating or discussing structured digital solutions?
+            </h2>
+            <p class="contact-sub reveal">
+              Open to internships, ambassador programs, engineering collaboration, and meaningful technical
+              conversations.
+              <br /><br />
+              <em>Open to internships, collaboration, and growth opportunities.</em>
+            </p>
+            <a href="https://wa.me/6282114677550?text=Can%20we%20discuss?" target="_blank"
+              class="contact-btn reveal">Get in Touch</a>
+          </div>
+          <div class="contact-channels reveal delay-2">
+            <a href="mailto:dimasrahmandiansyah@gmail.com" class="channel-row">
+              <div>
+                <div class="channel-key">Email</div>
+                <div class="channel-val">dimasrahmandiansyah@gmail.com</div>
+              </div>
+              <span class="channel-arr">↗</span>
+            </a>
+            <a href="https://linkedin.com/in/dimasrahmandiansyah" target="_blank" rel="noopener" class="channel-row">
+              <div>
+                <div class="channel-key">LinkedIn</div>
+                <div class="channel-val">linkedin.com/in/dimasrahmandiansyah</div>
+              </div>
+              <span class="channel-arr">↗</span>
+            </a>
+            <a href="https://github.com/dmsrzky" target="_blank" rel="noopener" class="channel-row">
+              <div>
+                <div class="channel-key">GitHub</div>
+                <div class="channel-val">github.com/dmsrzky</div>
+              </div>
+              <span class="channel-arr">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-id">
+        Dimas Rizky Rahmandiansyah Putra &nbsp;·&nbsp;
+        <span>© 2026 · Built and designed personally.</span>
+      </div>
+      <span class="footer-line">Exploring systems. Building with structure.</span>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+  <!-- Modal P1: Freelance Website -->
+  <div class="modal" id="modal-p1" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div class="modal-layout">
+      <div class="modal-gallery">
+        <div class="modal-img-main" id="gallery-p1-main">
+          <div class="modal-img-placeholder">
+            <div class="ph-inner">
+              <span class="ph-icon">◻</span>
+              <span class="ph-label">Project screenshot</span>
+              <span class="ph-hint">Add image: assets/p1-1.jpg</span>
+            </div>
+          </div>
+        </div>
+        <!-- UNTUK MENAMBAHKAN FOTO LAGI -->
+        <!-- <div class="modal-img-thumbs" id="thumbs-p1">
         <div class="modal-thumb active" data-img="" data-gallery="p1" data-idx="0">
           <div class="ph-thumb"><span>01</span></div>
         </div>
@@ -421,94 +465,116 @@
           <div class="ph-thumb"><span>03</span></div>
         </div>
       </div> -->
-    </div>
-    <div class="modal-info">
-      <div class="modal-tags">
-        <span class="modal-pill">HTML</span>
-        <span class="modal-pill">CSS</span>
-        <span class="modal-pill">JavaScript</span>
-        <span class="modal-pill">Hosting Platform</span>
       </div>
-      <h3 class="modal-title">Freelance Website Development</h3>
-      <p class="modal-seq">Project 01 · Web Development · Client Work</p>
-      <p class="modal-desc">Designed and developed a responsive website for a service-based client, focusing on clarity of communication, clean layout hierarchy, and professional presentation. Managed iterative feedback cycles and handled full deployment to a hosting environment. Configured basic on-page SEO as part of the delivery. The project covered the complete client-facing workflow from initial brief through to live site handoff.</p>
-      <div class="modal-rule"></div>
-      <div class="modal-actions">
-        <a href="#" class="modal-btn modal-btn-primary">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Live Site
-        </a>
-        <a href="https://github.com/dmsrzky/Freelance-Service-Website" target="_blank" class="modal-btn modal-btn-ghost">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          Source Code
-        </a>
+      <div class="modal-info">
+        <div class="modal-tags">
+          <span class="modal-pill">HTML</span>
+          <span class="modal-pill">CSS</span>
+          <span class="modal-pill">JavaScript</span>
+          <span class="modal-pill">Hosting Platform</span>
+        </div>
+        <h3 class="modal-title">Freelance Website Development</h3>
+        <p class="modal-seq">Project 01 · Web Development · Client Work</p>
+        <p class="modal-desc">Designed and developed a responsive website for a service-based client, focusing on
+          clarity of communication, clean layout hierarchy, and professional presentation. Managed iterative feedback
+          cycles and handled full deployment to a hosting environment. Configured basic on-page SEO as part of the
+          delivery. The project covered the complete client-facing workflow from initial brief through to live site
+          handoff.</p>
+        <div class="modal-rule"></div>
+        <div class="modal-actions">
+          <a href="#" class="modal-btn modal-btn-primary">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+            Live Site
+          </a>
+          <a href="https://github.com/dmsrzky/Freelance-Service-Website" target="_blank"
+            class="modal-btn modal-btn-ghost">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            Source Code
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modal P2: IoT -->
-<div class="modal" id="modal-p2" role="dialog" aria-modal="true">
-  <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
-  <div class="modal-layout">
-    <div class="modal-gallery">
-      <div class="modal-img-main" id="gallery-p2-main">
-        <div class="modal-img-placeholder">
-          <div class="ph-inner">
-            <span class="ph-icon">◈</span>
-            <span class="ph-label">Project photo</span>
-            <span class="ph-hint">Add image: assets/p2-1.jpg</span>
+  <!-- Modal P2: IoT -->
+  <div class="modal" id="modal-p2" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div class="modal-layout">
+      <div class="modal-gallery">
+        <div class="modal-img-main" id="gallery-p2-main">
+          <div class="modal-img-placeholder">
+            <div class="ph-inner">
+              <span class="ph-icon">◈</span>
+              <span class="ph-label">Project photo</span>
+              <span class="ph-hint">Add image: assets/p2-1.jpg</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-img-thumbs" id="thumbs-p2">
+          <div class="modal-thumb active" data-gallery="p2" data-idx="0">
+            <div class="ph-thumb"><span>01</span></div>
+          </div>
+          <div class="modal-thumb" data-gallery="p2" data-idx="1">
+            <div class="ph-thumb"><span>02</span></div>
+          </div>
+          <div class="modal-thumb" data-gallery="p2" data-idx="2">
+            <div class="ph-thumb"><span>03</span></div>
           </div>
         </div>
       </div>
-      <div class="modal-img-thumbs" id="thumbs-p2">
-        <div class="modal-thumb active" data-gallery="p2" data-idx="0">
-          <div class="ph-thumb"><span>01</span></div>
+      <div class="modal-info">
+        <div class="modal-tags">
+          <span class="modal-pill">Arduino</span>
+          <span class="modal-pill">Embedded C/C++</span>
+          <span class="modal-pill">Blynk</span>
+          <span class="modal-pill">IoT</span>
         </div>
-        <div class="modal-thumb" data-gallery="p2" data-idx="1">
-          <div class="ph-thumb"><span>02</span></div>
+        <h3 class="modal-title">IoT Monitoring System</h3>
+        <p class="modal-seq">Project 02 · Embedded Systems · IoT</p>
+        <p class="modal-desc">Built a sensor-based environmental monitoring system using Arduino microcontroller
+          hardware. The system captures real-time data from multiple sensors and transmits it wirelessly for remote
+          visualization. Integrated with the Blynk mobile platform to provide a live dashboard with threshold alerting.
+          This project demonstrates end-to-end IoT pipeline design — from physical hardware through to a user-facing
+          interface accessible on mobile.</p>
+        <div class="modal-rule"></div>
+        <div class="modal-actions">
+          <a href="https://github.com/dmsrzky" target="_blank" class="modal-btn modal-btn-primary">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            Source Code
+          </a>
         </div>
-        <div class="modal-thumb" data-gallery="p2" data-idx="2">
-          <div class="ph-thumb"><span>03</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="modal-info">
-      <div class="modal-tags">
-        <span class="modal-pill">Arduino</span>
-        <span class="modal-pill">Embedded C/C++</span>
-        <span class="modal-pill">Blynk</span>
-        <span class="modal-pill">IoT</span>
-      </div>
-      <h3 class="modal-title">IoT Monitoring System</h3>
-      <p class="modal-seq">Project 02 · Embedded Systems · IoT</p>
-      <p class="modal-desc">Built a sensor-based environmental monitoring system using Arduino microcontroller hardware. The system captures real-time data from multiple sensors and transmits it wirelessly for remote visualization. Integrated with the Blynk mobile platform to provide a live dashboard with threshold alerting. This project demonstrates end-to-end IoT pipeline design — from physical hardware through to a user-facing interface accessible on mobile.</p>
-      <div class="modal-rule"></div>
-      <div class="modal-actions">
-        <a href="https://github.com/dmsrzky" target="_blank" class="modal-btn modal-btn-primary">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          Source Code
-        </a>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modal P3: ERC-20 -->
-<div class="modal" id="modal-p3" role="dialog" aria-modal="true">
-  <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
-  <div class="modal-layout">
-    <div class="modal-gallery">
-      <div class="modal-img-main" id="gallery-p3-main">
-        <div class="modal-img-placeholder">
-          <div class="ph-inner">
-            <span class="ph-icon">⬡</span>
-            <span class="ph-label">Project screenshot</span>
-            <span class="ph-hint">Add image: assets/p3-1.jpg</span>
+  <!-- Modal P3: ERC-20 -->
+  <div class="modal" id="modal-p3" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div class="modal-layout">
+      <div class="modal-gallery">
+        <div class="modal-img-main" id="gallery-p3-main">
+          <div class="modal-img-placeholder">
+            <div class="ph-inner">
+              <span class="ph-icon">⬡</span>
+              <span class="ph-label">Project screenshot</span>
+              <span class="ph-hint">Add image: assets/p3-1.jpg</span>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- <div class="modal-img-thumbs" id="thumbs-p3">
+        <!-- <div class="modal-img-thumbs" id="thumbs-p3">
         <div class="modal-thumb active" data-gallery="p3" data-idx="0">
           <div class="ph-thumb"><span>01</span></div>
         </div>
@@ -516,28 +582,37 @@
           <div class="ph-thumb"><span>02</span></div>
         </div>
       </div> -->
-    </div>
-    <div class="modal-info">
-      <div class="modal-tags">
-        <span class="modal-pill">Solidity</span>
-        <span class="modal-pill">Remix IDE</span>
-        <span class="modal-pill">ERC-20</span>
-        <span class="modal-pill">Testnet</span>
       </div>
-      <h3 class="modal-title">Smart Contract Token — ERC-20</h3>
-      <p class="modal-seq">Project 03 · Web3 · Blockchain</p>
-      <p class="modal-desc">Implemented a standards-compliant ERC-20 token contract in Solidity as a hands-on exercise in understanding on-chain token mechanics. The contract includes minting controls, transfer logic, and ownership patterns following the OpenZeppelin standard. Deployed to a public Ethereum testnet via Remix IDE using Metamask for transaction signing. The project provided direct insight into the full contract lifecycle — from compilation through deployment and on-chain state verification.</p>
-      <div class="modal-rule"></div>
-      <div class="modal-actions">
-        <a href="https://github.com/dmsrzky" target="_blank" class="modal-btn modal-btn-primary">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          Source Code
-        </a>
+      <div class="modal-info">
+        <div class="modal-tags">
+          <span class="modal-pill">Solidity</span>
+          <span class="modal-pill">Remix IDE</span>
+          <span class="modal-pill">ERC-20</span>
+          <span class="modal-pill">Testnet</span>
+        </div>
+        <h3 class="modal-title">Smart Contract Token — ERC-20</h3>
+        <p class="modal-seq">Project 03 · Web3 · Blockchain</p>
+        <p class="modal-desc">Implemented a standards-compliant ERC-20 token contract in Solidity as a hands-on exercise
+          in understanding on-chain token mechanics. The contract includes minting controls, transfer logic, and
+          ownership patterns following the OpenZeppelin standard. Deployed to a public Ethereum testnet via Remix IDE
+          using Metamask for transaction signing. The project provided direct insight into the full contract lifecycle —
+          from compilation through deployment and on-chain state verification.</p>
+        <div class="modal-rule"></div>
+        <div class="modal-actions">
+          <a href="https://github.com/dmsrzky" target="_blank" class="modal-btn modal-btn-primary">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            Source Code
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
