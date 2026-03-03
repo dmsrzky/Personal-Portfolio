@@ -23,7 +23,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 const projectData = {
   p1: {
     images: [
-      { src: 'assets/images/studiowebsite.jpg', alt: 'Freelance Website — Desktop View' },
+      { src: 'assets/images/studiowebsite.png', alt: 'Freelance Website — Desktop View' },
       // { src: '', alt: 'Freelance Website — mobile view' },
       // { src: '', alt: 'Freelance Website — section detail' },
     ]
