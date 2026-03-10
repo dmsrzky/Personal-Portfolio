@@ -32,7 +32,7 @@ const projectData = {
     images: [
       { src: 'assets/images/tim-audros.jpeg', alt: 'IoT Monitoring System — Team' },
       { src: 'assets/images/final.jpg', alt: 'IoT Monitoring System — Hardware Setup' },
-      { src: '', alt: 'IoT Monitoring System — Program & Blynk Dashboard' },
+      { src: 'assets/images/program-audros.png', alt: 'IoT Monitoring System — Program & Blynk Dashboard' },
     ]
   },
   p3: {
