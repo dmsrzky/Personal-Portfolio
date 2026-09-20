@@ -4,613 +4,496 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dimas Rahmandiansyah — Engineering Portfolio</title>
+  <title>Dimas Rahmandiansyah — Embedded Systems, Control &amp; Applied AI</title>
   <meta name="description"
-    content="Electrical Engineering student at Telkom University focused on backend development, system architecture, and evolving toward scalable digital infrastructure." />
-  <meta name="keywords"
-    content="backend development, web3, electrical engineering, Telkom University, Indonesia, system architecture, digital systems" />
+    content="Electrical Engineering student at Telkom University. I build closed-loop control systems, IoT hardware and web products — measured, not demoed." />
   <meta name="author" content="Dimas Rahmandiansyah" />
-  <meta property="og:title" content="Dimas Rahmandiansyah — Building Structured Digital Systems" />
+  <meta property="og:title" content="Dimas Rahmandiansyah — Embedded Systems, Control & Applied AI" />
   <meta property="og:description"
-    content="Electrical Engineering student exploring backend systems, structured architecture, and decentralized infrastructure." />
+    content="Closed-loop control, IoT hardware and web products. Validated on hardware, shipped to users." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.dimasrahmandiansyah.app/" />
+  <meta property="og:image" content="https://www.dimasrahmandiansyah.app/assets/images/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0A0B0D" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <a href="#work" class="skip">Skip to content</a>
 
-  <header>
-    <div class="header-inner">
-      <a href="#" class="header-name">Dimas's Portfolio<em>.</em></a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#contact">Contact</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header id="head">
+    <div class="bar">
+      <a href="#top" class="mark">DIMAS<span>.</span></a>
+      <nav class="nav-d" id="navD">
+        <a href="#work" data-sec="work">Work</a>
+        <a href="#ventures" data-sec="ventures">Ventures</a>
+        <a href="#ai" data-sec="ai">AI</a>
+        <a href="#record" data-sec="record">Record</a>
       </nav>
-      <div class="header-icons">
-        <a href="https://github.com/dmsrzky" target="_blank" rel="noopener" class="icon-link"
-          aria-label="GitHub Profile">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-          </svg>
-        </a>
-        <a href="https://linkedin.com/in/dimasrahmandiansyah" target="_blank" rel="noopener" class="icon-link"
-          aria-label="LinkedIn Profile">
-          <svg viewBox="0 0 24 24">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-            <rect x="2" y="9" width="4" height="12" />
-            <circle cx="4" cy="4" r="2" />
-          </svg>
-        </a>
-        <a href="https://wa.me/6282114677550?text=Can%20we%20discuss?" target="_blank" rel="noopener" class="icon-link"
-          aria-label="WhatsApp Chat">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20.52 3.48A11.94 11.94 0 0012.01 0C5.39 0 .01 5.38.01 12c0 2.12.56 4.19 1.63 6.02L0 24l6.16-1.61A11.93 11.93 0 0012.01 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.2-3.49-8.52zM12.01 21.82c-1.82 0-3.6-.49-5.16-1.41l-.37-.22-3.65.95.98-3.56-.24-.37A9.79 9.79 0 012.22 12c0-5.4 4.39-9.79 9.79-9.79 2.61 0 5.06 1.02 6.91 2.87a9.73 9.73 0 012.88 6.92c0 5.4-4.39 9.79-9.79 9.79zm5.37-7.36c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.9 1.13-.16.19-.32.21-.61.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.16-.29-.02-.44.12-.58.13-.13.29-.32.43-.48.14-.16.19-.27.29-.45.1-.19.05-.35-.02-.48-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.48.07-.74.35-.26.29-.99.97-.99 2.37s1.01 2.75 1.15 2.94c.14.19 1.98 3.02 4.8 4.24.67.29 1.19.46 1.6.59.67.21 1.28.18 1.76.11.54-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.11-.26-.18-.55-.32z" />
-          </svg>
-        </a>
-      </div>
-      <button class="burger" id="burger" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
       </button>
+    </div>
+    <div class="nav-m" id="navM">
+      <a href="#work">Work</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#ai">AI</a>
+      <a href="#record">Record</a>
+      <a href="#contact">Get in touch</a>
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMobile()">About</a>
-    <a href="#projects" onclick="closeMobile()">Projects</a>
-    <a href="#achievements" onclick="closeMobile()">Achievements</a>
-    <a href="#contact" onclick="closeMobile()">Contact</a>
-  </div>
+  <!-- ============================ HERO ============================ -->
+  <section id="top" class="hero">
+    <div class="hero-wrap">
+      <div class="hero-left">
+        <p class="tag">Surabaya, Indonesia &middot; Available for internships</p>
+        <h1>
+          <span class="n1">Dimas Rizky</span>
+          <span class="n2">Rahmandiansyah</span>
+          <span class="n3">Putra<span class="dot">.</span></span>
+        </h1>
+        <p class="hero-sub">
+          Electrical Engineering student at Telkom University. I build embedded systems,
+          IoT hardware and web products &mdash; and I keep the numbers behind all three.
+        </p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-fill">See the work</a>
+          <a href="#contact" class="btn btn-line">Get in touch</a>
+        </div>
+      </div>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="dot-grid" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-            <circle cx="1" cy="1" r="1" fill="#0D7A5F" />
-          </pattern>
-          <radialGradient id="dfade" cx="30%" cy="50%" r="60%">
-            <stop offset="0%" stop-color="#F2EFE8" stop-opacity="0" />
-            <stop offset="100%" stop-color="#F2EFE8" stop-opacity="1" />
-          </radialGradient>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#dots)" />
-        <rect width="100%" height="100%" fill="url(#dfade)" />
-      </svg>
+      <div class="hero-right">
+        <figure class="portrait">
+          <img src="assets/images/profile.jpg"
+            alt="Dimas Rizky Rahmandiansyah Putra" />
+          <figcaption>
+            <span>Telkom University</span>
+            <span>GPA 3.71 / 4.00</span>
+          </figcaption>
+        </figure>
+
+        <div class="summary">
+          <p class="sum-k">Where I am now</p>
+          <p class="sum-t">
+            Seven years of robotics turned into embedded and control work: a hydroponic
+            control system that took Gold at I2ASPO, and a motor rig I tuned down to
+            0.11% error on hardware. That same habit &mdash; build it, measure it, ship it
+            &mdash; now runs <b>Studiowebsite.id</b>, the web studio I founded and sell for
+            myself. What I'm working on next is bringing AI properly into how I build,
+            rather than just how I think.
+          </p>
+          <ul class="sum-now">
+            <li><span>Building</span>Studiowebsite.id</li>
+            <li><span>Studying</span>Electrical Engineering, Telkom University</li>
+            <li><span>Exploring</span>AI workflows and agentic tooling</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="hero-inner">
-      <p class="hero-kicker">Dimas Rizky Rahmandiansyah Putra</p>
-      <h1 class="hero-title">Building and Exploring</h1>
-      <p class="hero-title-2">Digital Systems.</p>
-      <p class="hero-sub">Electrical Engineering student with hands-on experience in web development, IoT systems, and
-        early-stage Web3 exploration.</p>
-      <div class="hero-ctas">
-        <a href="#projects" class="cta-primary">View Projects</a>
-        <a href="https://wa.me/6282114677550?text=Can%20we%20discuss?" target="_blank" class="cta-secondary">Get in
-          Touch</a>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-run">
+        <span>ESP32 firmware</span><i></i><span>PID tuning</span><i></i><span>System identification</span><i></i>
+        <span>Discrete H-bridge</span><i></i><span>Quadrature encoding</span><i></i><span>MATLAB &amp; Simulink</span><i></i>
+        <span>Sensor calibration</span><i></i><span>Next.js</span><i></i><span>Applied AI workflows</span><i></i>
+        <span>ESP32 firmware</span><i></i><span>PID tuning</span><i></i><span>System identification</span><i></i>
+        <span>Discrete H-bridge</span><i></i><span>Quadrature encoding</span><i></i><span>MATLAB &amp; Simulink</span><i></i>
+        <span>Sensor calibration</span><i></i><span>Next.js</span><i></i><span>Applied AI workflows</span><i></i>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-wrap">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-label">01 / About</p>
-          <h2 class="section-title">Structured thinking.<br>Long-term orientation.</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <p>I'm an <strong>Electrical Engineering student at Telkom University</strong> (2024–Present) and a
-              recipient of the <strong>Aperti BUMN Scholarship</strong>. My background in electrical systems has shaped
-              how I approach software — with precision, fault tolerance, and specification before execution.</p>
-            <p>I have a track record in competitive engineering and innovation: <strong>Gold Medal at I2ASPO
-                2023</strong> (IoT category), 2nd Place at PNB IT 2023, and 2nd Place at Rotechtion 2019. These
-              environments trained me to build under constraint and deliver things that work.</p>
-            <p>My current direction is <strong>backend systems and decentralized infrastructure</strong> — where
-              architecture decisions matter as much as implementation. I operate on a simple principle: <strong>clarity,
-                logic, and scalability</strong> — in that order.</p>
-          </div>
-          <div class="about-panel reveal delay-1">
-            <div class="panel-row">
-              <div class="panel-key">Education</div>
-              <div class="panel-val">Telkom University</div>
-              <div class="panel-sub">Electrical Engineering · 2024–Present</div>
-            </div>
-            <div class="panel-row">
-              <div class="panel-key">Scholarship</div>
-              <div class="panel-val">Aperti BUMN</div>
-              <div class="panel-sub">Recipient · 2024</div>
-            </div>
-            <div class="panel-row">
-              <div class="panel-key">Based In</div>
-              <div class="panel-val">Surabaya, Indonesia</div>
-              <div class="panel-sub">Open to remote · hybrid</div>
-            </div>
-            <div class="panel-row">
-              <div class="panel-key">Focus</div>
-              <div class="panel-val">Backend Systems · Web3</div>
-              <div class="panel-sub">Architecture · Infrastructure</div>
-            </div>
-            <div class="panel-row">
-              <div class="panel-key">Open To</div>
-              <div class="panel-val">Internships · Ambassador Programs</div>
-              <div class="panel-sub">Collaborative engineering work</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- ============================ WORK ============================ -->
+  <section id="work" class="sec">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Engineering</p>
+        <h2>Systems I took<br />all the way to working.</h2>
+        <p class="sec-lede">
+          Both built from components rather than modules. Both proved with measurements
+          rather than a video of it spinning.
+        </p>
+      </header>
     </div>
+
+    <!-- 01 -->
+    <article class="row reveal">
+      <div class="row-media">
+        <figure class="schem">
+          <img src="assets/images/capstone-hbridge.jpg"
+            alt="Proteus schematic of the discrete H-bridge: IRF9540 and IRF540 MOSFETs driven by BD139 transistors, SR560 flyback diodes and a 100 nF snubber across the DC motor"
+            loading="lazy" />
+          <figcaption>Discrete H-bridge driver, simulated in Proteus before it went on the board.</figcaption>
+        </figure>
+      </div>
+      <div class="row-body">
+        <p class="row-idx">01</p>
+        <h3>Closed-Loop DC Motor Speed Control</h3>
+        <p class="row-meta">Integrated capstone · Telkom University · Apr–May 2026 · Team of 6</p>
+        <p class="row-text">
+          A full H-bridge built from discrete parts — four MOSFETs (IRF9540 P-channel,
+          IRF540N N-channel) with BD139 gate drivers, freewheeling diodes and a snubber
+          capacitor. ESP32 firmware running 20&nbsp;kHz PWM and 4× quadrature encoder
+          decoding through dual-channel interrupt service routines, giving 880 effective
+          pulses per revolution.
+        </p>
+        <ul class="row-facts">
+          <li><b>58%</b><span>noise cut, filter moved into firmware</span></li>
+          <li><b>12.78</b><span>RPM RMSE across two ID methods</span></li>
+          <li><b>0.11%</b><span>steady-state error on hardware</span></li>
+        </ul>
+        <ul class="chips">
+          <li>ESP32</li><li>C/C++</li><li>Power electronics</li><li>MATLAB</li><li>Simulink</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="wrap">
+      <figure class="loop reveal">
+        <svg viewBox="0 0 900 172" role="img"
+          aria-label="Control loop: setpoint, summing junction, PID on ESP32, PWM, discrete H-bridge, DC motor, quadrature encoder and low-pass filter feeding back">
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"
+              orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" class="ar-head" />
+            </marker>
+          </defs>
+          <text class="lp-io" x="4" y="52">400 RPM</text>
+          <path class="lp-w" d="M62 62 H98" marker-end="url(#ar)" />
+          <circle class="lp-sum" cx="112" cy="62" r="14" />
+          <text class="lp-sum-t" x="112" y="67" text-anchor="middle">&#8721;</text>
+          <text class="lp-sign" x="104" y="46">+</text>
+          <text class="lp-sign" x="104" y="90">&#8722;</text>
+          <path class="lp-w" d="M126 62 H172" marker-end="url(#ar)" />
+          <rect class="lp-box lp-hi" x="174" y="38" width="132" height="48" rx="2" />
+          <text class="lp-t" x="240" y="59" text-anchor="middle">PID controller</text>
+          <text class="lp-s" x="240" y="75" text-anchor="middle">ESP32 firmware</text>
+          <path class="lp-w" d="M306 62 H352" marker-end="url(#ar)" />
+          <text class="lp-lab" x="329" y="30" text-anchor="middle">20 kHz PWM</text>
+          <rect class="lp-box" x="354" y="38" width="132" height="48" rx="2" />
+          <text class="lp-t" x="420" y="59" text-anchor="middle">H-bridge</text>
+          <text class="lp-s" x="420" y="75" text-anchor="middle">4&#215; discrete MOSFET</text>
+          <path class="lp-w" d="M486 62 H532" marker-end="url(#ar)" />
+          <rect class="lp-box" x="534" y="38" width="120" height="48" rx="2" />
+          <text class="lp-t" x="594" y="59" text-anchor="middle">DC motor</text>
+          <text class="lp-s" x="594" y="75" text-anchor="middle">plant</text>
+          <path class="lp-w" d="M654 62 H820" marker-end="url(#ar)" />
+          <text class="lp-io" x="828" y="67">&#969;</text>
+          <path class="lp-w" d="M760 62 V128 H660" marker-end="url(#ar)" />
+          <rect class="lp-box" x="510" y="104" width="150" height="48" rx="2" />
+          <text class="lp-t" x="585" y="125" text-anchor="middle">Quadrature encoder</text>
+          <text class="lp-s" x="585" y="141" text-anchor="middle">880 pulses/rev</text>
+          <path class="lp-w" d="M510 128 H452" marker-end="url(#ar)" />
+          <rect class="lp-box lp-hi" x="302" y="104" width="150" height="48" rx="2" />
+          <text class="lp-t" x="377" y="125" text-anchor="middle">Low-pass filter</text>
+          <text class="lp-s" x="377" y="141" text-anchor="middle">first-order, firmware</text>
+          <path class="lp-w" d="M302 128 H112 V76" marker-end="url(#ar)" />
+        </svg>
+        <figcaption>
+          Plant identified as <span class="m">G(s) = 2.501 / (0.0498s + 1)</span> from serial data in MATLAB.
+          Both Ziegler-Nichols variants were invalid here — no measurable dead time, and a single real
+          closed-loop pole makes sustained oscillation impossible — so tuning came from Simulink PID Tuner,
+          trading settling time for noise robustness. The two highlighted blocks are where the work was.
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 02 -->
+    <article class="row row-flip reveal">
+      <div class="row-media">
+        <img src="assets/images/tim-audros.jpeg"
+          alt="The AUDROS team with the built hydroponic system at the I2ASPO competition booth" loading="lazy" />
+      </div>
+      <div class="row-body">
+        <p class="row-idx">02</p>
+        <h3>AUDROS — Hydroponic Nutrient &amp; pH Control</h3>
+        <p class="row-meta">Competition project · 2023 · Gold Medal, I2ASPO (IoT category)</p>
+        <p class="row-text">
+          An ESP32 system that reads TDS, pH and DS18B20 temperature, then drives DC dosing pumps
+          through relays to hold a hydroponic reservoir in range. Local alerts over a 16×2 I2C LCD
+          and buzzer; remote monitoring through Blynk. Dosing was calibrated against lettuce
+          requirements — pH 6.0–7.0 and 560–840 ppm — after benchmarking mineral, well and
+          municipal water.
+        </p>
+        <ul class="row-facts">
+          <li><b>80%</b><span>of assembly and wiring done personally</span></li>
+          <li><b>IDR 1.48M</b><span>bill of materials, co-authored</span></li>
+          <li><b>2 &rarr; 1</b><span>rejections before the gold medal</span></li>
+        </ul>
+        <p class="row-note">
+          Rejected at proposal stage by BRIN and by an international competition in Malaysia.
+          I entered the same system twice more: 2nd place at PNB IT 2023, then Gold at I2ASPO 2023.
+        </p>
+        <ul class="chips">
+          <li>ESP32</li><li>Sensor calibration</li><li>Relay actuation</li><li>Blynk</li>
+        </ul>
+      </div>
+    </article>
   </section>
 
-  <!-- TECHNICAL DIRECTION -->
-  <section id="technical">
-    <div class="section-wrap">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-label">02 / Technical Direction</p>
-          <h2 class="section-title">How I think about<br>building systems.</h2>
-        </div>
-        <div class="tech-grid reveal">
-          <div class="tech-cell">
-            <span class="tech-tag">Layer 01</span>
-            <div class="tech-name">Backend and Web Infrastructure</div>
-            <ul class="tech-list">
-              <li>REST API fundamentals and design</li>
-              <li>Server-side logic &amp; data modeling</li>
-              <li>Deployment experience</li>
-              <li>Hosting environments &amp; server config</li>
-              <li>Git &amp; version control workflow</li>
-            </ul>
-          </div>
-          <div class="tech-cell">
-            <span class="tech-tag">Layer 02</span>
-            <div class="tech-name">Web3 and Decentralized Exploration</div>
-            <ul class="tech-list">
-              <li>Smart contract logic (Remix, Solidity)</li>
-              <li>Basic Solidity development</li>
-              <li>Decentralized system architecture</li>
-              <li>Token standards &amp; on-chain concepts</li>
-              <li>Testnet deployment &amp; verification</li>
-            </ul>
-          </div>
-          <div class="tech-cell">
-            <span class="tech-tag">Layer 03</span>
-            <div class="tech-name">System Thinking</div>
-            <ul class="tech-list">
-              <li>Structured problem-solving</li>
-              <li>Logic-driven development</li>
-              <li>Architectural mindset</li>
-              <li>Documentation-first approach</li>
-              <li>IoT systems &amp; embedded logic</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <!-- ============================ VENTURES ============================ -->
+  <section id="ventures" class="sec">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Ventures</p>
+        <h2>Things I started<br />and had to run myself.</h2>
+        <p class="sec-lede">
+          Not coursework. No one handed me a brief, and I did the selling as well as the building.
+        </p>
+      </header>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-wrap">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-label">03 / Selected Projects</p>
-          <h2 class="section-title">Things I have built.</h2>
-        </div>
-
-        <!-- Project 01 -->
-        <div class="project-entry reveal">
-          <div class="project-top">
-            <div>
-              <div class="project-seq">Project 01</div>
-              <div class="project-name">Freelance Website Development</div>
-            </div>
-            <div class="project-ext-links">
-              <button class="ext-link ext-details" onclick="openModal('p1')">Details ↗</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div>
-              <div class="proj-field-key">Context / Problem</div>
-              <div class="proj-field-val">A client required a simple web presence to communicate their services clearly
-                and professionally.</div>
-            </div>
-            <div>
-              <div class="proj-field-key">What Was Built</div>
-              <div class="proj-field-val">Designed and developed a responsive website based on client requirements and
-                iterative feedback. Handled deployment to hosting environment and assisted with basic on-page SEO
-                configuration.</div>
-            </div>
-          </div>
-          <div class="project-foot">
-            <span class="stack-pill">HTML</span>
-            <span class="stack-pill">CSS</span>
-            <span class="stack-pill">JavaScript</span>
-            <span class="stack-pill">Hosting Platform</span>
-          </div>
-        </div>
-
-        <!-- Project 02 -->
-        <div class="project-entry reveal delay-1">
-          <div class="project-top">
-            <div>
-              <div class="project-seq">Project 02</div>
-              <div class="project-name">IoT Monitoring System</div>
-            </div>
-            <div class="project-ext-links">
-              <button class="ext-link ext-details" onclick="openModal('p2')">Details ↗</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div>
-              <div class="proj-field-key">Context / Problem</div>
-              <div class="proj-field-val">Monitoring environmental sensor data in real time using microcontroller-based
-                hardware and a mobile interface.</div>
-            </div>
-            <div>
-              <div class="proj-field-key">What Was Built</div>
-              <div class="proj-field-val">Developed sensor-based monitoring system using Arduino for data processing and
-                transmission. Integrated with the Blynk mobile application to visualize real-time data and enable remote
-                monitoring.</div>
-            </div>
-          </div>
-          <div class="project-foot">
-            <span class="stack-pill">Arduino</span>
-            <span class="stack-pill">Embedded C/C++</span>
-            <span class="stack-pill">Blynk</span>
-          </div>
-        </div>
-
-        <!-- Project 03 -->
-        <div class="project-entry reveal delay-2">
-          <div class="project-top">
-            <div>
-              <div class="project-seq">Project 03</div>
-              <div class="project-name">Smart Contract Token — ERC-20</div>
-            </div>
-            <div class="project-ext-links">
-              <button class="ext-link ext-details" onclick="openModal('p3')">Details ↗</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div>
-              <div class="proj-field-key">Context / Problem</div>
-              <div class="proj-field-val">Hands-on exploration to understand token logic, contract structure, and
-                deployment flow in decentralized environments.</div>
-            </div>
-            <div>
-              <div class="proj-field-key">What Was Built</div>
-              <div class="proj-field-val">Implemented a basic ERC-20 token contract using Solidity and deployed it to a
-                public testnet through Remix IDE to understand contract lifecycle and on-chain behavior.</div>
-            </div>
-          </div>
-          <div class="project-foot">
-            <span class="stack-pill">Solidity</span>
-            <span class="stack-pill">Remix IDE</span>
-            <span class="stack-pill">Metamask</span>
-            <span class="stack-pill">Testnet</span>
-          </div>
-        </div>
-
+    <article class="row reveal">
+      <div class="row-media">
+        <img src="assets/images/studiowebsite-mockup.jpg" alt="Studiowebsite.id homepage shown in a browser window" loading="lazy" />
       </div>
-    </div>
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements">
-    <div class="section-wrap">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-label">04 / Selected Achievements</p>
-          <h2 class="section-title">Credibility markers.</h2>
-        </div>
-        <div class="ach-table reveal">
-          <div class="ach-row">
-            <span class="ach-medal">Scholarship</span>
-            <div>
-              <div class="ach-name">Aperti BUMN Scholarship Recipient</div>
-              <div class="ach-org">State-Owned Enterprise Talent Program · Telkom University</div>
-            </div>
-            <span class="ach-year">2024</span>
-          </div>
-          <div class="ach-row">
-            <span class="ach-medal">Gold Medal</span>
-            <div>
-              <div class="ach-name">I2ASPO — IoT Category</div>
-              <div class="ach-org">International Applied Science &amp; Project Olympiad</div>
-            </div>
-            <span class="ach-year">2023</span>
-          </div>
-          <div class="ach-row">
-            <span class="ach-medal">2nd Place</span>
-            <div>
-              <div class="ach-name">PNB IT Competition</div>
-              <div class="ach-org">Politeknik Negeri Bali</div>
-            </div>
-            <span class="ach-year">2023</span>
-          </div>
-          <div class="ach-row">
-            <span class="ach-medal">2nd Place</span>
-            <div>
-              <div class="ach-name">Rotechtion Engineering Competition</div>
-              <div class="ach-org">National Level</div>
-            </div>
-            <span class="ach-year">2019</span>
-          </div>
-        </div>
+      <div class="row-body">
+        <p class="row-idx">03</p>
+        <h3>Studiowebsite.id</h3>
+        <p class="row-meta">Web studio · Founder · Apr 2026 – present</p>
+        <p class="row-text">
+          A studio for restaurants, SMEs and property developers who need a site that actually
+          works, not a template with their logo on it. I handle the whole chain myself: scoping,
+          design, build, deployment, and finding the clients in the first place.
+        </p>
+        <p class="row-text">
+          Below: a site I built for a paying client, a demo I use to show what a restaurant
+          system can do, and the work I put into the studio's own site.
+        </p>
+        <ul class="chips">
+          <li>Next.js</li><li>Supabase</li><li>TypeScript</li><li>Deployment</li><li>Paid acquisition</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </article>
 
-  <!-- COMMUNITY -->
-  <section id="community">
-    <div class="section-wrap">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-label">05 / Community &amp; Collaborative Experience</p>
-          <h2 class="section-title">Participation beyond<br>solo engineering.</h2>
-        </div>
-        <div class="community-layout reveal">
-          <div class="community-card">
-            <div class="comm-role">AIESEC AFL Participant</div>
-            <div class="comm-org">AIESEC · Active Leadership Formation</div>
-            <div class="comm-desc">Participated in structured leadership development programs with cross-cultural team
-              dynamics and collaborative project execution.</div>
-          </div>
-          <div class="community-card">
-            <div class="comm-role">Volunteer Contributor</div>
-            <div class="comm-org">Peduly &amp; Involuntir</div>
-            <div class="comm-desc">Contributed to community impact initiatives through organized volunteer networks.
-              Developed coordination and collaborative delivery skills in team-based environments.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="wrap">
+      <div class="builds reveal">
+        <p class="gal-head">Selected builds</p>
+        <div class="builds-grid">
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-wrap">
-      <div class="wrap">
-        <div class="contact-grid">
-          <div>
-            <p class="section-label reveal">06 / Contact</p>
-            <h2 class="section-title reveal">Interested in collaborating or discussing structured digital solutions?
-            </h2>
-            <p class="contact-sub reveal">
-              Open to internships, ambassador programs, engineering collaboration, and meaningful technical
-              conversations.
-              <br /><br />
-              <em>Open to internships, collaboration, and growth opportunities.</em>
-            </p>
-            <a href="https://wa.me/6282114677550?text=Can%20we%20discuss?" target="_blank"
-              class="contact-btn reveal">Get in Touch</a>
-          </div>
-          <div class="contact-channels reveal delay-2">
-            <a href="mailto:dimasrahmandiansyah@gmail.com" class="channel-row">
-              <div>
-                <div class="channel-key">Email</div>
-                <div class="channel-val">dimasrahmandiansyah@gmail.com</div>
+          <article class="build">
+            <div class="build-media shot">
+              <div class="shot-bar"><i></i><i></i><i></i><span>bekleedsurabaya.com</span></div>
+              <img src="assets/images/bsm.jpg" alt="Homepage of BSM Bekleed Jok Mobil Surabaya, showing open pricing from Rp 500.000 and a WhatsApp call to action" loading="lazy" />
+            </div>
+            <div class="build-body">
+              <h4>BSM Bekleed Jok Mobil</h4>
+              <p class="build-kind">Company profile · client project</p>
+              <p>
+                A car upholstery workshop in Surabaya, running since 2010. The site puts the full
+                price list out in the open, shows materials and colours, a before-and-after
+                portfolio, and routes every visitor to WhatsApp, where the workshop actually closes
+                its jobs.
+              </p>
+              <a class="build-link" href="https://bekleedsurabaya.com/" target="_blank" rel="noopener">Visit the live site &#8599;</a>
+            </div>
+          </article>
+
+          <article class="build">
+            <div class="build-media shot">
+              <div class="shot-bar"><i></i><i></i><i></i><span>senja dining room · demo</span></div>
+              <img src="assets/images/senja.jpg" alt="Senja Dining Room homepage with a restaurant interior and a button to pick a table" loading="lazy" />
+            </div>
+            <div class="build-body">
+              <h4>Senja Dining Room</h4>
+              <p class="build-kind">Restaurant reservation system · demo</p>
+              <p>
+                Guests pick a table from an interactive floor plan with live availability, and staff
+                manage it all from an admin dashboard. Double bookings are blocked at the database
+                level, not just hidden in the interface.
+              </p>
+              <div class="build-foot">
+                <span class="build-stack-i">Next.js · Supabase</span>
+                <a class="build-link" href="https://rdx-studiowebsiteid.netlify.app/" target="_blank" rel="noopener">Try the demo &#8599;</a>
               </div>
-              <span class="channel-arr">↗</span>
-            </a>
-            <a href="https://linkedin.com/in/dimasrahmandiansyah" target="_blank" rel="noopener" class="channel-row">
-              <div>
-                <div class="channel-key">LinkedIn</div>
-                <div class="channel-val">linkedin.com/in/dimasrahmandiansyah</div>
+            </div>
+          </article>
+
+          <article class="build">
+            <div class="build-media psi">
+              <p class="psi-k">PageSpeed Insights · Performance</p>
+              <div class="psi-row">
+                <figure class="psi-g">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <circle cx="60" cy="60" r="50" class="psi-track" />
+                    <circle cx="60" cy="60" r="50" class="psi-arc psi-mid" style="stroke-dasharray: 232.5 314.2" />
+                  </svg>
+                  <b class="psi-mid-t">74</b>
+                  <figcaption>Before</figcaption>
+                </figure>
+                <span class="psi-arrow" aria-hidden="true">&rarr;</span>
+                <figure class="psi-g">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <circle cx="60" cy="60" r="50" class="psi-track" />
+                    <circle cx="60" cy="60" r="50" class="psi-arc psi-good" style="stroke-dasharray: 282.8 314.2" />
+                  </svg>
+                  <b class="psi-good-t">90</b>
+                  <figcaption>After</figcaption>
+                </figure>
               </div>
-              <span class="channel-arr">↗</span>
-            </a>
-            <a href="https://github.com/dmsrzky" target="_blank" rel="noopener" class="channel-row">
-              <div>
-                <div class="channel-key">GitHub</div>
-                <div class="channel-val">github.com/dmsrzky</div>
-              </div>
-              <span class="channel-arr">↗</span>
-            </a>
-          </div>
+            </div>
+            <div class="build-body">
+              <h4>The studio's own site</h4>
+              <p class="build-kind">Technical SEO overhaul</p>
+              <p>
+                Structured data, a proper sitemap, images cut by 76% and CSS by 38%, scripts and
+                fonts loaded without blocking the page. Not glamorous, but it is the part clients
+                never see and always benefit from.
+              </p>
+              <p class="build-stack">JSON-LD · Core Web Vitals</p>
+            </div>
+          </article>
+
+        </div>
+        <a class="builds-more" href="https://studiowebsite.id/#portfolio" target="_blank" rel="noopener">
+          <span>More client work and demos</span>
+          <b>studiowebsite.id/portfolio &#8599;</b>
+        </a>
+      </div>
+
+      <div class="earlier reveal">
+        <p class="earlier-k">Earlier</p>
+        <div>
+          <h4>Shopee dropshipping <span>· Bali · 2023</span></h4>
+          <p>
+            My first attempt at selling something, run with two friends while I was still in school.
+            I sourced stock from local sellers and handled the listings and orders. It is where I
+            learned that building the thing is the easy half.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-id">
-        Dimas Rizky Rahmandiansyah Putra &nbsp;·&nbsp;
-        <span>© 2026 · Built and designed personally.</span>
-      </div>
-      <span class="footer-line">Exploring systems. Building with structure.</span>
-    </div>
-  </footer>
+  <!-- ============================ AI ============================ -->
+  <section id="ai" class="sec sec-alt">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Working with AI</p>
+        <h2>Where I am with it,<br />and where it's going.</h2>
+        <p class="sec-lede">
+          An honest position rather than a claim. This section changes as the work does.
+        </p>
+      </header>
 
-  <!-- MODALS -->
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
-
-  <!-- Modal P1: Freelance Website -->
-  <div class="modal" id="modal-p1" role="dialog" aria-modal="true">
-    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
-    <div class="modal-layout">
-      <div class="modal-gallery">
-        <div class="modal-img-main" id="gallery-p1-main">
-          <div class="modal-img-placeholder">
-            <div class="ph-inner">
-              <span class="ph-icon">◻</span>
-              <span class="ph-label">Project screenshot</span>
-              <span class="ph-hint">Add image: assets/p1-1.jpg</span>
-            </div>
-          </div>
+      <div class="ai-grid reveal">
+        <div class="ai-card">
+          <p class="ai-n">01</p>
+          <h4>Two months of using it as a thinking partner</h4>
+          <p>
+            For Studiowebsite.id I've used AI mainly to think out loud &mdash; shaping demo site
+            concepts, scripting and editing content, working through ad targeting and how to follow
+            up with leads that go quiet. Useful, but shallow. It was a sounding board, not part of
+            the build.
+          </p>
         </div>
-        <!-- UNTUK MENAMBAHKAN FOTO LAGI -->
-        <!-- <div class="modal-img-thumbs" id="thumbs-p1">
-        <div class="modal-thumb active" data-img="" data-gallery="p1" data-idx="0">
-          <div class="ph-thumb"><span>01</span></div>
+        <div class="ai-card">
+          <p class="ai-n">02</p>
+          <h4>First output is a draft, never the answer</h4>
+          <p>
+            Across the demo sites and the content work, nothing shipped on the first response.
+            The value sits in the second, third and fourth pass. Treating the first output as
+            finished is where most people get burned.
+          </p>
         </div>
-        <div class="modal-thumb" data-img="" data-gallery="p1" data-idx="1">
-          <div class="ph-thumb"><span>02</span></div>
-        </div>
-        <div class="modal-thumb" data-img="" data-gallery="p1" data-idx="2">
-          <div class="ph-thumb"><span>03</span></div>
-        </div>
-      </div> -->
-      </div>
-      <div class="modal-info">
-        <div class="modal-tags">
-          <span class="modal-pill">HTML</span>
-          <span class="modal-pill">CSS</span>
-          <span class="modal-pill">JavaScript</span>
-          <span class="modal-pill">Hosting Platform</span>
-        </div>
-        <h3 class="modal-title">Freelance Website Development</h3>
-        <p class="modal-seq">Project 01 · Web Development · Client Work</p>
-        <p class="modal-desc">Designed and developed a responsive website for a service-based client, focusing on
-          clarity of communication, clean layout hierarchy, and professional presentation. Managed iterative feedback
-          cycles and handled full deployment to a hosting environment. Configured basic on-page SEO as part of the
-          delivery. The project covered the complete client-facing workflow from initial brief through to live site
-          handoff.</p>
-        <div class="modal-rule"></div>
-        <div class="modal-actions">
-          <a href="https://studiowebsite.id" target="_blank" class="modal-btn modal-btn-primary">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-              <polyline points="15 3 21 3 21 9" />
-              <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-            Live Site
-          </a>
-          <a href="https://github.com/dmsrzky/Freelance-Service-Website" target="_blank"
-            class="modal-btn modal-btn-ghost">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-            </svg>
-            Source Code
-          </a>
+        <div class="ai-card ai-card-live">
+          <p class="ai-n">03 <span class="ai-now">current</span></p>
+          <h4>Paying to go deeper, from this month</h4>
+          <p>
+            I recently started paying for a Pro subscription out of my own pocket, because the free
+            tier capped how far I could push it. The next stretch is deliberate: moving from asking
+            AI things to building workflows that run without me. This section will change as that
+            does.
+          </p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Modal P2: IoT -->
-  <div class="modal" id="modal-p2" role="dialog" aria-modal="true">
-    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
-    <div class="modal-layout">
-      <div class="modal-gallery">
-        <div class="modal-img-main" id="gallery-p2-main">
-          <div class="modal-img-placeholder">
-            <div class="ph-inner">
-              <span class="ph-icon">◈</span>
-              <span class="ph-label">Project photo</span>
-              <span class="ph-hint">Add image: assets/p2-1.jpg</span>
-            </div>
-          </div>
+  <!-- ============================ RECORD ============================ -->
+  <section id="record" class="sec">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Record</p>
+        <h2>Background and results.</h2>
+      </header>
+
+      <div class="rec-grid">
+        <div class="reveal">
+          <h4 class="rec-h">Education</h4>
+          <ul class="rec-l">
+            <li><b>Telkom University</b> — Electrical Engineering<span>Surabaya · 2024–present · GPA 3.71 / 4.00</span></li>
+            <li><b>Aperti BUMN Scholarship</b><span>Recipient · 2024</span></li>
+            <li><b>SMA Negeri 4 Denpasar</b> — Technical class<span>Bali · 2021–2024 · 88.46 / 100</span></li>
+          </ul>
+          <h4 class="rec-h">Training</h4>
+          <ul class="rec-l">
+            <li><b>Thinker Bee Learning Center</b> — 7 years of robotics<span>2016–2023 · LEGO NXT/EV3 through to Arduino embedded development</span></li>
+          </ul>
         </div>
-        <div class="modal-img-thumbs" id="thumbs-p2">
-          <div class="modal-thumb active" data-gallery="p2" data-idx="0">
-            <div class="ph-thumb"><span>01</span></div>
-          </div>
-          <div class="modal-thumb" data-gallery="p2" data-idx="1">
-            <div class="ph-thumb"><span>02</span></div>
-          </div>
-          <div class="modal-thumb" data-gallery="p2" data-idx="2">
-            <div class="ph-thumb"><span>03</span></div>
-          </div>
+
+        <div class="reveal">
+          <h4 class="rec-h">Awards</h4>
+          <ul class="rec-l">
+            <li><b>Gold Medal — I2ASPO 2023</b>, IoT category<span>IYSA, with Institut Teknologi Sepuluh Nopember</span></li>
+            <li><b>2nd Place — PNB IT 2023</b>, IoT competition<span>Politeknik Negeri Bali</span></li>
+            <li><b>2nd Place — Rotechtion 2019</b><span>Universitas Udayana</span></li>
+          </ul>
+          <h4 class="rec-h">Beyond engineering</h4>
+          <ul class="rec-l">
+            <li><b>AIESEC — AFL programme</b><span>Oct–Dec 2025 · cross-cultural collaboration and leadership</span></li>
+            <li><b>Volunteer — Peduly &amp; Involuntir</b><span>Surakarta · Dec 2024 · community programmes</span></li>
+          </ul>
         </div>
       </div>
-      <div class="modal-info">
-        <div class="modal-tags">
-          <span class="modal-pill">Arduino</span>
-          <span class="modal-pill">Embedded C/C++</span>
-          <span class="modal-pill">Blynk</span>
-          <span class="modal-pill">IoT</span>
-        </div>
-        <h3 class="modal-title">IoT Monitoring System</h3>
-        <p class="modal-seq">Project 02 · Embedded Systems · IoT</p>
-        <p class="modal-desc">Built a sensor-based environmental monitoring system using Arduino microcontroller
-          hardware. The system captures real-time data from multiple sensors and transmits it wirelessly for remote
-          visualization. Integrated with the Blynk mobile platform to provide a live dashboard with threshold alerting.
-          This project demonstrates end-to-end IoT pipeline design — from physical hardware through to a user-facing
-          interface accessible on mobile.</p>
-        <div class="modal-rule"></div>
-        <div class="modal-actions">
-          <a href="https://github.com/dmsrzky/IoT-Monitoring-System" target="_blank" class="modal-btn modal-btn-primary">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-            </svg>
-            Source Code
-          </a>
-        </div>
+
+      <div class="skills reveal">
+        <div><span class="sk">Embedded</span>ESP32, Arduino, C/C++, PWM, ADC, interrupts, quadrature decoding, I2C, UART</div>
+        <div><span class="sk">Control &amp; signals</span>PID tuning, system identification, transfer function modelling, digital filtering, FFT analysis</div>
+        <div><span class="sk">Power electronics</span>Discrete H-bridge design, MOSFET switching, gate drivers, back-EMF protection</div>
+        <div><span class="sk">Tools</span>MATLAB, Simulink, Proteus, Git &amp; GitHub</div>
+        <div><span class="sk">Web</span>JavaScript, HTML/CSS, Next.js, deployment and hosting</div>
+        <div><span class="sk">Languages</span>Indonesian (native), English (professional working)</div>
+      </div>
+
+      <p class="aside reveal">
+        Earlier exploration: an ERC-20 token contract written in Solidity and deployed to a public
+        testnet through Remix IDE, to understand contract lifecycle and on-chain state. A learning
+        exercise, not a body of work.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACT ============================ -->
+  <section id="contact" class="close">
+    <div class="wrap">
+      <p class="tag reveal">Open to research internships, engineering work and collaboration</p>
+      <h2 class="close-h reveal">Let's build something<br />that has to work.</h2>
+      <a class="close-mail reveal" href="mailto:dimasrahmandiansyah@gmail.com">dimasrahmandiansyah@gmail.com</a>
+      <div class="close-links reveal">
+        <a href="https://linkedin.com/in/dimasrahmandiansyah" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/dmsrzky" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/dimasrahmandiansyah" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="close-foot">
+        <span>Dimas Rizky Rahmandiansyah Putra</span>
+        <span>Surabaya, Indonesia · Designed and coded personally</span>
       </div>
     </div>
-  </div>
-
-  <!-- Modal P3: ERC-20 -->
-  <div class="modal" id="modal-p3" role="dialog" aria-modal="true">
-    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
-    <div class="modal-layout">
-      <div class="modal-gallery">
-        <div class="modal-img-main" id="gallery-p3-main">
-          <div class="modal-img-placeholder">
-            <div class="ph-inner">
-              <span class="ph-icon">⬡</span>
-              <span class="ph-label">Project screenshot</span>
-              <span class="ph-hint">Add image: assets/p3-1.jpg</span>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="modal-img-thumbs" id="thumbs-p3">
-        <div class="modal-thumb active" data-gallery="p3" data-idx="0">
-          <div class="ph-thumb"><span>01</span></div>
-        </div>
-        <div class="modal-thumb" data-gallery="p3" data-idx="1">
-          <div class="ph-thumb"><span>02</span></div>
-        </div>
-      </div> -->
-      </div>
-      <div class="modal-info">
-        <div class="modal-tags">
-          <span class="modal-pill">Solidity</span>
-          <span class="modal-pill">Remix IDE</span>
-          <span class="modal-pill">ERC-20</span>
-          <span class="modal-pill">Testnet</span>
-        </div>
-        <h3 class="modal-title">Smart Contract Token — ERC-20</h3>
-        <p class="modal-seq">Project 03 · Web3 · Blockchain</p>
-        <p class="modal-desc">Implemented a standards-compliant ERC-20 token contract in Solidity as a hands-on exercise
-          in understanding on-chain token mechanics. The contract includes minting controls, transfer logic, and
-          ownership patterns following the OpenZeppelin standard. Deployed to a public Ethereum testnet via Remix IDE
-          using Metamask for transaction signing. The project provided direct insight into the full contract lifecycle —
-          from compilation through deployment and on-chain state verification.</p>
-        <div class="modal-rule"></div>
-        <div class="modal-actions">
-          <a href="https://github.com/dmsrzky/Smart-Contract-Exercise" target="_blank" class="modal-btn modal-btn-primary">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-            </svg>
-            Source Code
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <script src="js/script.js"></script>
 </body>

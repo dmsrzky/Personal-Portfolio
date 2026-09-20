@@ -1,26 +1,31 @@
-# Personal Engineering Portfolio
+# Personal Portfolio — dimasrahmandiansyah.app
 
-A structured personal portfolio website built to present my technical direction, selected projects, and engineering mindset.
+Source for my personal portfolio: embedded and control work, IoT hardware, and the
+web studio I run, each with the details that show how it was built.
 
-## Purpose
-To establish a clean and minimal digital identity while showcasing practical web development experience and system-oriented thinking.
+**Live:** https://www.dimasrahmandiansyah.app
 
-## Tech Stack
-- HTML
-- CSS
-- JavaScript
+## Stack
+Vanilla HTML, CSS and JavaScript. No framework, no build step.
 
-## Features
-- Responsive layout
-- Minimal UI design
-- Structured content sections
-- Smooth scroll interactions
+## Sections
+- **Hero** — who I am and what I'm working on now
+- **Engineering** — closed-loop DC motor speed control (capstone) and AUDROS, a hydroponic
+  nutrient and pH controller that took Gold at I2ASPO 2023
+- **Ventures** — Studiowebsite.id: a client site, a demo, and the studio's own SEO work
+- **Working with AI** — where I am with it, honestly
+- **Record** — education, awards, skills
 
-## Live Demo
-[View Website](https://your-link.com)
+## Structure
+```
+index.html
+css/style.css
+js/script.js        nav, active-section highlight, scroll reveal
+assets/images/
+```
 
-## Preview
-![Portfolio Preview](assets/images/personal-portfolio.png)
-
-## Notes
-This project focuses on clarity, structured layout, and performance optimization rather than heavy animations or visual effects.
+## Local preview
+```bash
+python3 -m http.server 8000
+```
+Then open http://localhost:8000

@@ -1,123 +1,62 @@
-// MOBILE MENU
-document.getElementById('burger').addEventListener('click', () => {
-  document.getElementById('mobileMenu').classList.toggle('open');
-});
-function closeMobile() {
-  document.getElementById('mobileMenu').classList.remove('open');
-}
-
-// SCROLL REVEAL
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('in');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-
-// MODALS
-const projectData = {
-  p1: {
-    images: [
-      { src: 'assets/images/studiowebsite.png', alt: 'Freelance Website — Desktop View' },
-      // { src: '', alt: 'Freelance Website — mobile view' },
-      // { src: '', alt: 'Freelance Website — section detail' },
-    ]
-  },
-  p2: {
-    images: [
-      { src: 'assets/images/tim-audros.jpeg', alt: 'IoT Monitoring System — Team' },
-      { src: 'assets/images/final.jpg', alt: 'IoT Monitoring System — Hardware Setup' },
-      { src: 'assets/images/program-audros.png', alt: 'IoT Monitoring System — Program & Blynk Dashboard' },
-    ]
-  },
-  p3: {
-    images: [
-      { src: 'assets/images/remix.jpg', alt: 'ERC-20 Token — Remix IDE Deployment' },
-      // { src: '', alt: 'ERC-20 Token — testnet transaction' },
-    ]
-  }
-};
-
-let activeModal = null;
-
-function openModal(projectId) {
-  const modal = document.getElementById('modal-' + projectId);
-  const overlay = document.getElementById('modalOverlay');
-  if (!modal) return;
-
-  if (activeModal && activeModal !== modal) closeModal(false);
-
-  activeModal = modal;
-  overlay.classList.add('active');
-  modal.classList.add('active');
-  document.body.classList.add('modal-open');
-
-  loadGalleryImage(projectId, 0);
-
-  document.addEventListener('keydown', handleEsc);
-}
-
-function closeModal(resetActive = true) {
-  const overlay = document.getElementById('modalOverlay');
-  overlay.classList.remove('active');
-  document.body.classList.remove('modal-open');
-  document.removeEventListener('keydown', handleEsc);
-
-  if (activeModal) {
-    activeModal.classList.remove('active');
-    if (resetActive) activeModal = null;
-  }
-}
-
-function handleEsc(e) {
-  if (e.key === 'Escape') closeModal();
-}
-
-function loadGalleryImage(projectId, idx) {
-  const data = projectData[projectId];
-  if (!data) return;
-
-  const imgData = data.images[idx];
-  const mainContainer = document.getElementById('gallery-' + projectId + '-main');
-  if (!mainContainer) return;
-
-  if (imgData && imgData.src) {
-    mainContainer.innerHTML = `<img src="${imgData.src}" alt="${imgData.alt}" loading="lazy" />`;
-  } else {
-    mainContainer.innerHTML = `
-      <div class="modal-img-placeholder">
-        <div class="ph-inner">
-          <span class="ph-icon">${getProjectIcon(projectId)}</span>
-          <span class="ph-label">${imgData ? imgData.alt : 'Project image'}</span>
-          <span class="ph-hint">Add image path in index.js → projectData.${projectId}</span>
-        </div>
-      </div>`;
-  }
-
-  const thumbContainer = document.getElementById('thumbs-' + projectId);
-  if (thumbContainer) {
-    thumbContainer.querySelectorAll('.modal-thumb').forEach((t, i) => {
-      t.classList.toggle('active', i === idx);
+/* ---------- nav ---------- */
+(function () {
+  var b = document.getElementById('burger'), m = document.getElementById('navM'),
+      h = document.getElementById('head');
+  if (b && m) {
+    b.addEventListener('click', function () {
+      var o = m.classList.toggle('open');
+      b.setAttribute('aria-expanded', o ? 'true' : 'false');
+    });
+    m.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        m.classList.remove('open'); b.setAttribute('aria-expanded', 'false');
+      });
     });
   }
-}
 
-function getProjectIcon(id) {
-  const icons = { p1: '◻', p2: '◈', p3: '⬡' };
-  return icons[id] || '○';
-}
-
-document.querySelectorAll('.modal-thumb').forEach(thumb => {
-  thumb.addEventListener('click', () => {
-    const gallery = thumb.dataset.gallery;
-    const idx = parseInt(thumb.dataset.idx, 10);
-    if (gallery !== undefined && !isNaN(idx)) {
-      loadGalleryImage(gallery, idx);
+  var hero = document.querySelector('.hero');
+  function onScroll() {
+    var past = window.scrollY > (hero ? hero.offsetHeight - 80 : 400);
+    h.classList.toggle('solid', past);
+    var p = document.getElementById('progress');
+    if (p) {
+      var max = document.body.scrollHeight - window.innerHeight;
+      p.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
     }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+/* ---------- active section ---------- */
+(function () {
+  var links = document.querySelectorAll('.nav-d a[data-sec]');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      links.forEach(function (l) {
+        l.classList.toggle('on', l.getAttribute('data-sec') === e.target.id);
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ['work', 'ventures', 'ai', 'record'].forEach(function (id) {
+    var el = document.getElementById(id); if (el) io.observe(el);
   });
-});
+})();
+
+/* ---------- reveal ---------- */
+(function () {
+  var items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (e) { e.classList.add('in'); }); return;
+  }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  items.forEach(function (e) { io.observe(e); });
+})();
